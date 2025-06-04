@@ -5,6 +5,7 @@ node_modules/
 
 # Expo
 .expo/
+.expo-shared/
 dist/
 web-build/
 expo-env.d.ts
@@ -20,6 +21,7 @@ expo-env.d.ts
 
 # Metro
 .metro-health-check*
+.cache/
 
 # debug
 npm-debug.*
@@ -30,8 +32,39 @@ yarn-error.*
 .DS_Store
 *.pem
 
-# local env files
-.env*.local
+# Logs and runtime
+*.log
+*.tmp
+tmp*.json
+*.tmp
+
+# Jest coverage output
+coverage/
 
 # typescript
 *.tsbuildinfo
+
+# Env & secrets
+.env
+.env.local
+.env.*.local
+
+# IDEs
+.vscode/
+.idea/
+
+# iOS / Android native folders - Uncomment if you eject from Expo
+# ios/
+# android/
+
+# eslint & Prettier
+.eslintcache
+.prettiercache
+
+# Tailwind
+.tailwind-cache/
+.postcss-cache/
+
+# Jest watch mode snapshot state
+.jest/
+
