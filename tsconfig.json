@@ -17,5 +17,5 @@
     "noEmit": true,
     "baseUrl": "./src"
   },
-  "include": ["src", "App.tsx"]
+  "include": ["src", "App.tsx", "src/types"]
 }
