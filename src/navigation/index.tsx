@@ -1,10 +1,17 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import ComposeScreen from '../screens/ComposeScreen';
 import FeedScreen from '../screens/FeedScreen';
+import ComposeScreen from '../screens/ComposeScreen';
+import DetailScreen from '../screens/DetailScreen';
 
-const Stack = createNativeStackNavigator();
+export type RootStackParamList = {
+  Feed: undefined;
+  Compose: undefined;
+  Detail: { id: string };
+};
+
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 export default function Navigation() {
   return (
@@ -12,6 +19,7 @@ export default function Navigation() {
       <Stack.Navigator initialRouteName="Feed">
         <Stack.Screen name="Feed" component={FeedScreen} />
         <Stack.Screen name="Compose" component={ComposeScreen} />
+        <Stack.Screen name="Detail" component={DetailScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
