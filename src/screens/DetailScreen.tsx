@@ -1,15 +1,16 @@
 import { View, Text } from 'react-native';
 import { useRoute } from '@react-navigation/native';
-import { useAppNavigation } from '../navigation/hooks';
+import type { RouteProp } from '@react-navigation/native';
+import type { RootStackParamList } from '../navigation';
 
 export default function DetailScreen() {
-  const navigation = useAppNavigation();
-  const route = useRoute();
-  const { id } = route.params as { id: string };
+  const route = useRoute<RouteProp<RootStackParamList, 'Detail'>>();
+  const { id } = route.params;
 
   return (
     <View className="flex-1 items-center justify-center">
-      <Text>Detail view for item {id}</Text>
+      <Text className="text-xl font-bold mb-4">Detail View</Text>
+      <Text>Post ID: {id}</Text>
     </View>
   );
 }
