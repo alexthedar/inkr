@@ -1,4 +1,4 @@
-export type ContentType = 'tweet' | 'post' | 'article';
+export type ContentType = 'micro' | 'post' | 'article';
 
 export interface ContentItem {
   id: string; // UUID or timestamp-based

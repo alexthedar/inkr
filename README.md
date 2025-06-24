@@ -36,7 +36,7 @@ This app is being built in **four modular phases**:
 - Mobile-only (Expo + TypeScript)
 - Fully local with no backend
 - Content types:
-  - Tweets (≤250 characters)
+  - Micros (≤250 characters)
   - Posts (≤250 words)
   - Articles (≤750 words)
 - Features:

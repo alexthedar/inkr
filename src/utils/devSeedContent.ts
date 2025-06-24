@@ -12,8 +12,8 @@ export const seedTestContent = () => {
   const fakeItems: ContentItem[] = [
     {
       id: generateId(),
-      type: 'tweet',
-      text: 'Hello, world! This is my first tweet.',
+      type: 'micro',
+      text: 'Hello, world! This is my first microblog.',
       createdAt: now,
     },
     {

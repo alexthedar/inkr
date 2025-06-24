@@ -8,6 +8,7 @@ type ContentStore = {
   addItem: (item: ContentItem) => void;
   editItem: (id: string, updates: Partial<ContentItem>) => void;
   removeItem: (id: string) => void;
+  clearAllItems: () => void;
 };
 
 export const useContentStore = create<ContentStore>()(
@@ -22,6 +23,7 @@ export const useContentStore = create<ContentStore>()(
           ),
         }),
       removeItem: id => set({ items: get().items.filter(item => item.id !== id) }),
+      clearAllItems: () => set({ items: [] }),
     }),
     {
       name: 'inkr-content',
